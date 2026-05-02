@@ -17,20 +17,27 @@ body {
 
 .title {
   text-align: center;
-  font-size: clamp(22px, 6vw, 32px);
+  font-size: clamp(22px, 6vw, 30px);
   font-weight: 900;
   color: white;
-  margin-bottom: 8px;
-  line-height: 1.2;
+  margin-bottom: 24px;
+  line-height: 1.35;
+  position: relative;
+  display: inline-block;
+  width: 100%;
 }
 
-.subtitle {
-  text-align: center;
-  font-size: 14px;
-  color: rgba(255,255,255,0.4);
-  margin-bottom: 32px;
-  font-weight: 300;
+.title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #c0392b, #e74c3c);
+  border-radius: 2px;
+  margin: 12px auto 0;
 }
+
+.subtitle { display: none; }
 
 .cards {
   display: flex;
@@ -211,8 +218,7 @@ body {
 </head>
 <body>
 
-<div class="title">למה בלי פילטר?</div>
-<div class="subtitle">השוואה כנה בינינו לבין כולם</div>
+<div class="title">איך המשחק שלנו שונה<br>וטוב ממשחקים אחרים?</div>
 
 <div class="cards">
 
